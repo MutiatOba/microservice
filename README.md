@@ -26,6 +26,39 @@ Microservices Architecture:
 
 ### What is Docker?
 
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+Docker is an open-source platform that enables developers to automate the deployment, scaling, and management of applications using containerization. Containers are lightweight, isolated environments that package an application and its dependencies, ensuring consistency and reproducibility across different computing environments.
+
+<img width="466" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3cd073f0-41e0-4516-b54c-4f4b62811bd8">
+
+
+### What is containerisation?
+
+Containerization is the process of encapsulating an application and its dependencies into a container. It involves bundling an application, along with its runtime environment, system tools, libraries, and configurations, into a self-contained unit known as a container.
+
+The container provides an isolated and lightweight execution environment that runs consistently across different computing environments, such as development machines, testing servers, and production systems. The containerization technology achieves this by leveraging operating system-level virtualization, where multiple containers can run on a single host operating system.
+
+### Containerisation vs Virtulisation
+
+virtualization creates separate virtual machines that mimic entire computers, while containerization creates isolated environments that run applications using shared resources. Virtualization is like having separate houses within a building, while containerization is like having separate apartments within a building.
+
+Virtualization:
+
+- Virtualization is like having multiple computers within a single physical computer.
+- It creates virtual machines (VMs) that act as separate computers with their own operating systems and resources.
+- Each VM runs independently and can run different operating systems or software.
+- VMs are more heavyweight as they require a full operating system and replicate the entire computer environment.
+- Virtualization is like having multiple houses within a single building, each with its own rooms and facilities.
+
+Containerization:
+
+- Containerization is like having multiple isolated apartments within a single building.
+- It creates containers that are lightweight and isolated environments for running applications.
+- Containers share the host operating system and run as isolated processes.
+- Containers are more lightweight and use fewer resources compared to virtual machines.
+- Containerization is like having multiple self-contained apartments with their own kitchens, bathrooms, and utilities, all within a single building.
+
+<img width="507" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/a38f189f-ea9b-4b4c-adfa-df5e00c409ff">
+
+
 
 
