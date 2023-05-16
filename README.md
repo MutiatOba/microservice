@@ -175,3 +175,23 @@ Once the push is successful, the image will be available in your Docker Hub repo
 
 9. type into your webbrower: localhost:90 - will show you your updated index.html
 
+### Creating a Docker file for APP
+  
+1. navigate to where app folder is saved
+
+2. Create a file called Dockerfile - ```touch Dockerfile```
+
+3. enter into Dockerfile - ```nano Dockerfile```
+
+  <img width="185" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e8118e3c-374a-483c-9941-b07109b8e5cc">
+
+
+4. create the image: ```docker build -t mutioba/appx:v2 .```
+
+5. check images are there: ```docker images```
+
+6. create container: ```docker run -d -p 3000:3000 mutioba/app:v2```
+
+7. do docker push: ```docker push mutioba/app:v2```
+
+8. type into your webbrower: localhost:3000 - will show you your app
