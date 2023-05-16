@@ -152,9 +152,7 @@ Once the push is successful, the image will be available in your Docker Hub repo
 9. to pull the image from docker hub: ```docker pull mutioba/profile:latest```
 
   
-  
-  
- Need to automate creating a docker image
+### Automate creating a docker image
 
 1. navigate to where we have index.html file saved
 
