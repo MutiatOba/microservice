@@ -66,42 +66,45 @@ Docker helps us achieve miscroservice
 
 Docker hub = docker registry
 
-Docker client - whoever has docker on machine
-How to communicate - usual commands
-docker run - pull it down and run it
-docker pull - just pulls 
-docker build - build miscroservices using a docker image
-They check locally first
+- Docker client - whoever has docker on machine
+- How to communicate - usual commands
+- ```docker run``` - pull it down and run it
+- ```docker pull``` - just pulls 
+- ```docker build``` - build miscroservices using a docker image
+Each command runs an API behind the scenes . When you run the run and pull command a local check is done first and if not found, then a check is done on the registry.
 
-Each command runs an API behind the scenes - if 200 responds use locally (docker host), if not then goes to the registry
+To find the latest images on the registry, so to docker hub: click on explore - shows you avaiable images - under trusted contect click ```docker official image``` and ```verified images``` to search for images.
 
-Go to docker hub:
-click on explore - shows you avaiable images - under trusted contect click docker office image and verified images 
+#### steps: 
+Here are a few of the key commands: 
+- ```docker images``` - shows us the images
+- ```docker ps``` - shows us the containers running
+- ```docker stop <container id>``` - stops the container - so if go to webbrower then gone
+- ```docker start <cointer id>``` - restrart
+- ``` docker rm <cointiner id> -f```- to permanently remove the container
 
-Go to gitbash
+1. Go to gitbash
 docker run hello-world [hello-world is the name of the image]
 
 <img width="443" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/daf19ec6-2258-42e2-8690-a50b2bcd5abe">
 
-To find the image - ```docker images``` 
+2. To find the image - ```docker images``` 
 <img width="369" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/ce8fb229-2a83-41ff-a9dd-338482d9a860">
 
-to create an nginx image: 
+3. to create an nginx image: 
 ```docker run -d -p 80:80 nginx``` [connect to port 80 of my local host to its port]
 <img width="439" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2c426125-b50b-47da-9548-f2c705d2db0c">
 
-type local host in web browser
-```docker images``` - shows us the images
-```docker ps``` - shows us the containers running
-```docker stop <container id>``` - stops the container - so if go to webbrower then gone
-```docker start <cointer id>``` - restrart
-``` docker rm <cointiner id> -f```- 
+4. type local host in web browser
 
-To enter the container shell:
-alias docker="winpty docker"
-docker exec -it <contaienr id> sh
+5. To enter the container shell:
+- type: ```alias docker="winpty docker"```
+- ```docker exec -it <contaienr id> sh```
 <img width="686" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/a97b5d88-1cd4-4528-af43-0a03543e6197">
 <img width="270" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5d776280-b939-4f4f-bd05-d2636443c6b7">
-Need to do a ```apt update```
-go to brower: http://localhost
+- Need to do a ```apt update``` and can amend the file by cd into the following directory: /usr/share/nginx
+<img width="229" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/9af257e0-bb90-4d54-a3e1-32bedf80d18d">
+
+- In the above directory you will find two files one including the index.html file
+- go to brower: http://localhost
 <img width="549" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/27860087-c57d-4baf-8da1-2648e943ddc6">
