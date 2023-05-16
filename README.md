@@ -128,7 +128,7 @@ docker cp index.html 966b13e83ae6:usr/share/nginx/html
 localhost:80 - shows you the new index
 
 3. create image based on container:
-docker commit 966b13e83ae6 mutiat_profile:latest
+```docker commit 966b13e83ae6 mutiat_profile:latest```
 
 4. to see list of images:
 ```docker images```
@@ -145,3 +145,4 @@ docker commit 966b13e83ae6 mutiat_profile:latest
 8. push to docker
 
 ```docker push mutioba/profile:latest```
+9. to pull the image from docker hub: ```docker pull mutioba/profile:latest```
