@@ -62,7 +62,7 @@ Containerization:
 ### How to use Docker
 Docker image is immutable - cant change once built, this helps with versioning 
 
-Docker helps us achieve miscroservice
+Docker helps us to build miscroservices
 
 Docker hub = docker registry
 
