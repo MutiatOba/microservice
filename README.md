@@ -123,14 +123,15 @@ docker run hello-world [hello-world is the name of the image]
 
 
 2. cd to where the index file is saved and type command:
-docker cp index.html 966b13e83ae6:usr/share/nginx/html
+```docker cp index.html 966b13e83ae6:usr/share/nginx/html```
 
-localhost:80 - shows you the new index
+type this in the browser: localhost:80 - shows you the new index.html file content (instead of nginx)
 
-3. create image based on container:
+3. create image based on an existing container:
 ```docker commit 966b13e83ae6 mutiat_profile:latest```
+After executing the command, Docker will create the new image using the current state of the container.
 
-4. to see list of images:
+4. to see list of docker images you have created locally:
 ```docker images```
 
 5. create a repository in docker hub
@@ -139,10 +140,13 @@ localhost:80 - shows you the new index
 
 ```docker tag mutiat_profile:latest mutioba/profile:latest```
 
-7. login to docker
+7. login to docker. This command will prompt you for your Docker Hub username and password
 ```docker login```
 
-8. push to docker
+8. push to docker - nce you have tagged your image and logged in to Docker Hub, you can push the image using the docker push command
 
 ```docker push mutioba/profile:latest```
+  
+Once the push is successful, the image will be available in your Docker Hub repository and can be pulled by others or used in other systems.
+  
 9. to pull the image from docker hub: ```docker pull mutioba/profile:latest```
