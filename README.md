@@ -161,3 +161,6 @@ Once the push is successful, the image will be available in your Docker Hub repo
 2. Create a file called Dockerfile - ```touch Dockerfile```
 
 3. enter into Dockerfile - ```nano Dockerfile```
+  
+ <img width="257" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/db87a7f5-0192-479c-8ab6-4801989555e2">
+
