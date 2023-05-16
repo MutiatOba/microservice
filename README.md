@@ -195,3 +195,5 @@ Once the push is successful, the image will be available in your Docker Hub repo
 7. do docker push: ```docker push mutioba/app:v2```
 
 8. type into your webbrower: localhost:3000 - will show you your app
+
+  <img width="541" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2d0a0d0e-ee46-4282-be06-edc446a0c8bb">
