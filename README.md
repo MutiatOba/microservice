@@ -59,6 +59,46 @@ Containerization:
 
 <img width="507" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/a38f189f-ea9b-4b4c-adfa-df5e00c409ff">
 
+### How to use Docker
+Docker image is immutable - cant change once built, this helps with versioning 
 
+Docker helps us achieve miscroservice
 
+Docker hub = docker registry
 
+Docker client - whoever has docker on machine
+How to communicate - usual commands
+docker run - pull it down and run it
+docker pull - just pulls 
+docker build - build miscroservices using a docker image
+They check locally first
+
+Each command runs an API behind the scenes - if 200 responds use locally (docker host), if not then goes to the registry
+
+Go to docker hub:
+click on explore - shows you avaiable images - under trusted contect click docker office image and verified images 
+
+Go to gitbash
+docker run hello-world [hello-world is the name of the image]
+
+<img width="443" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/daf19ec6-2258-42e2-8690-a50b2bcd5abe">
+
+To find the image - ```docker images``` 
+<img width="369" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/ce8fb229-2a83-41ff-a9dd-338482d9a860">
+
+to create an nginx image: 
+```docker run -d -p 80:80 nginx``` [connect to port 80 of my local host to its port]
+<img width="439" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2c426125-b50b-47da-9548-f2c705d2db0c">
+
+type local host in web browser
+```docker images``` - shows us the images
+```docker ps``` - shows us the containers running
+```docker stop <container id>``` - stops the container - so if go to webbrower then gone
+```docker start <cointer id>``` - restrart
+``` docker rm <cointiner id> -f```- 
+
+To enter the container shell:
+alias docker="winpty docker"
+docker exec -it <contaienr id> sh
+<img width="686" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/a97b5d88-1cd4-4528-af43-0a03543e6197">
+<img width="270" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5d776280-b939-4f4f-bd05-d2636443c6b7">
