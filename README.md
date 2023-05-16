@@ -111,3 +111,6 @@ docker run hello-world [hello-world is the name of the image]
 - In the above directory you will find two files one including the index.html file
 - go to brower: http://localhost
 <img width="549" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/27860087-c57d-4baf-8da1-2648e943ddc6">
+
+
+<img width="423" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3097951f-173f-4bc4-a166-51553d984a95">
