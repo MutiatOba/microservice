@@ -105,7 +105,7 @@ docker run hello-world [hello-world is the name of the image]
 
 <img width="270" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5d776280-b939-4f4f-bd05-d2636443c6b7">
 
-- Need to do a ```apt update``` and can access the index.html file by cd into the following directory: /usr/share/nginx
+- Need to do a ```apt update``` and can access the index.html file by cd into the following directory: /usr/share/nginx/html
 <img width="229" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/9af257e0-bb90-4d54-a3e1-32bedf80d18d">
 
 - In the above directory you will find two files one including the index.html file
@@ -114,3 +114,34 @@ docker run hello-world [hello-world is the name of the image]
 
 
 <img width="423" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3097951f-173f-4bc4-a166-51553d984a95">
+
+### Creating a docker image from a container
+
+1. create a file locally called index.html
+
+<img width="251" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/89e43063-71eb-46ef-bd30-c30cd5592251">
+
+
+2. cd to where the index file is saved and type command:
+docker cp index.html 966b13e83ae6:usr/share/nginx/html
+
+localhost:80 - shows you the new index
+
+3. create image based on container:
+docker commit 966b13e83ae6 mutiat_profile:latest
+
+4. to see list of images:
+```docker images```
+
+5. create a repository in docker hub
+
+6. Tag your Docker image: Before pushing the image, you should tag it with the appropriate Docker Hub repository name. The general format for tagging an image is <dockerhub_username>/<repository_name>:<tag>:
+
+```docker tag mutiat_profile:latest mutioba/profile:latest```
+
+7. login to docker
+```docker login```
+
+8. push to docker
+
+```docker push mutioba/profile:latest```
