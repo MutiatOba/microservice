@@ -102,3 +102,6 @@ alias docker="winpty docker"
 docker exec -it <contaienr id> sh
 <img width="686" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/a97b5d88-1cd4-4528-af43-0a03543e6197">
 <img width="270" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5d776280-b939-4f4f-bd05-d2636443c6b7">
+Need to do a ```apt update```
+go to brower: http://localhost
+<img width="549" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/27860087-c57d-4baf-8da1-2648e943ddc6">
