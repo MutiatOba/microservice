@@ -150,3 +150,14 @@ After executing the command, Docker will create the new image using the current 
 Once the push is successful, the image will be available in your Docker Hub repository and can be pulled by others or used in other systems.
   
 9. to pull the image from docker hub: ```docker pull mutioba/profile:latest```
+
+  
+  
+  
+ Need to automate creating a docker image
+
+1. navigate to where we have index.html file saved
+
+2. Create a file called Dockerfile - ```touch Dockerfile```
+
+3. enter into Dockerfile - ```nano Dockerfile```
