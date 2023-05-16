@@ -183,7 +183,8 @@ Once the push is successful, the image will be available in your Docker Hub repo
 
 3. enter into Dockerfile - ```nano Dockerfile```
 
-  <img width="185" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e8118e3c-374a-483c-9941-b07109b8e5cc">
+ <img width="364" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2362090f-e338-4ba5-8ca8-ad3efa7077db">
+
 
 
 4. create the image: ```docker build -t mutioba/appx:v2 .```
