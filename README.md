@@ -1,6 +1,8 @@
 ### What is a miscorservice?
 A microservice is a software architectural style that structures an application as a collection of small, loosely coupled, and independently deployable services. Each microservice represents a specific business capability and operates as a separate, self-contained unit.
 
+<img width="476" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/00988add-5f2e-47c0-b605-6532c4fb4753">
+
 
 ### what is the difference between n-tier and microservices architecture?
 
