@@ -91,10 +91,12 @@ docker run hello-world [hello-world is the name of the image]
 <img width="443" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/daf19ec6-2258-42e2-8690-a50b2bcd5abe">
 
 2. To find the image - ```docker images``` 
+
 <img width="369" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/ce8fb229-2a83-41ff-a9dd-338482d9a860">
 
 3. to create an nginx image: 
 ```docker run -d -p 80:80 nginx``` [is used to run a Docker container based on the NGINX image and map port 80 of the container to port 80 of the host machine. -d stands for "detached" mode, which means the container runs in the background and doesn't attach to the current terminal session. This allows you to continue using the terminal without the container's output being displayed. -p 80:80: This option specifies port mapping, where the first value 80 represents the port on the host machine, and the second 80 represents the port inside the container. In this case, it maps port 80 of the host to port 80 of the NGINX container. This allows you to access the NGINX web server running inside the container through port 80 of your host machine  ]
+
 <img width="439" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2c426125-b50b-47da-9548-f2c705d2db0c">
 
 4. To enter the container shell:
@@ -110,6 +112,7 @@ docker run hello-world [hello-world is the name of the image]
 
 - In the above directory you will find two files one including the index.html file
 - go to brower: http://localhost
+
 <img width="549" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/27860087-c57d-4baf-8da1-2648e943ddc6">
 
 
