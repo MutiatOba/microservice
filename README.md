@@ -105,7 +105,7 @@ docker run hello-world [hello-world is the name of the image]
 
 <img width="270" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5d776280-b939-4f4f-bd05-d2636443c6b7">
 
-- Need to do a ```apt update``` and can amend the file by cd into the following directory: /usr/share/nginx
+- Need to do a ```apt update``` and can access the index.html file by cd into the following directory: /usr/share/nginx
 <img width="229" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/9af257e0-bb90-4d54-a3e1-32bedf80d18d">
 
 - In the above directory you will find two files one including the index.html file
