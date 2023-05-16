@@ -162,5 +162,18 @@ Once the push is successful, the image will be available in your Docker Hub repo
 
 3. enter into Dockerfile - ```nano Dockerfile```
   
- <img width="257" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/db87a7f5-0192-479c-8ab6-4801989555e2">
+<img width="246" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/9d7236b2-2946-4d02-9f43-b77f48851b2a">
+
+  
+4  make sure that you are not using port 80 by stopping any container runing on this port (do ```docker ps```)
+
+5. create the image: ```docker build -t mutioba/tech221-nginx:v1 .```
+
+6. check images are there: ```docker images```
+
+7. create container: ```docker run -d -p 90:80 mutioba/tech221-nginx:v1```
+
+8. do docker push: ```docker push mutioba/tech221-nginx:v1```
+
+9. type into your webbrower: localhost:90 - will show you your updated index.html
 
