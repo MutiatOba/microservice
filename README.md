@@ -220,18 +220,12 @@ Dependecies: node app container must work, docker must be running
 
 #### Using kubernetes
 <img width="288" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5e14c2f1-e4e3-493d-acb6-733d2aab056e">
+ 
+1. create a folder
+2. create YML file
+<img width="294" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/7c6c7775-4d1e-49e2-a9f2-aa420d19b0ed">
 
-create a Cluster = CLI
+3. type in gitbash: ```kubectl create -f nginx-deployment.yml```
+4. type ```kubectl get deploy``` then ```kubectl get pods```
+<img width="292" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3aaafb4d-79c7-43bb-ae21-991f250d4143">
 
-Pod1 = ec2 instance
-  
-Use YAML
-  
-K8 Service (svc) - so can see it externally
-  
-##### set up K8
-  - open docker desktop as admin
-  - click on setting
-  - clik on 
-  - kubectl 
-  - kubectl get svc
