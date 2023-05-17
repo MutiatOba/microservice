@@ -229,3 +229,23 @@ Dependecies: node app container must work, docker must be running
 4. type ```kubectl get deploy``` then ```kubectl get pods```
 <img width="292" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3aaafb4d-79c7-43bb-ae21-991f250d4143">
 
+### creating service
+<img width="318" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/1151731d-675b-4c52-a742-d4cdb4a36563">
+1. in the same folder as above create yml file
+<img width="223" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/d6052f4e-4655-4487-941b-91e6216755de">
+
+2. run the command: ```kubectl create -f nginx-service.yml```
+ <img width="214" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3e6ec9a6-3c21-48c6-a6aa-2e6bb4e1fcda">
+
+  <img width="335" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e0871c2f-3928-46ec-a8d7-e97b4bfd4e7d">
+
+<img width="453" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/c7256c32-d764-4d82-b76b-2ea6cbf6061f">
+  
+k8 is self healing:
+1. in a new bash command run ```kubectl get pods```
+2. then delete a pod: ```kubectl delete pod <pod id>
+<img width="232" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e9d050b8-089f-429d-9d37-b5ebb719eef1">
+3. you will see when you run the ```kubectl get pods``` again that a new pod has started
+<img width="392" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/227ab9b4-7d2a-4426-b8a9-fbb6e27e5db5">
+
+  
