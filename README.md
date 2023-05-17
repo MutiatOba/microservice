@@ -26,6 +26,9 @@ Microservices Architecture:
 - Autonomous data management per service: Each microservice can have its own dedicated database or data storage, providing autonomy and flexibility.
 - Independent deployment and scaling: Microservices can be deployed and scaled independently, allowing for faster iterations and targeted scaling based on demand.
 
+<img width="326" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/663225a8-6527-431f-9d91-57dd092cca45">
+
+
 ### What is Docker?
 
 Docker is an open-source platform that enables developers to automate the deployment, scaling, and management of applications using containerization. Containers are lightweight, isolated environments that package an application and its dependencies, ensuring consistency and reproducibility across different computing environments.
@@ -201,3 +204,34 @@ Once the push is successful, the image will be available in your Docker Hub repo
 8. type into your webbrower: localhost:3000 - will show you your app
 
   <img width="541" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2d0a0d0e-ee46-4282-be06-edc446a0c8bb">
+
+### Kubernetes
+  
+Kubernettes - Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management. Can scale with it and make it fault tolerant, it is self healing.
+
+Dependecies: node app container must work, docker must be running 
+
+#### when not to use microservices? 
+
+ microservices and monolith can be done locally or on the cloud
+  
+- shouldnt use monolith - when want to scale, when want to make it fault tolerant 
+- shouldnt us microservices - when small projects which doesnt need to scale as loads of resources to manage which is costly and needs to be maintained. 
+
+#### Using kubernetes
+<img width="288" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5e14c2f1-e4e3-493d-acb6-733d2aab056e">
+
+create a Cluster = CLI
+
+Pod1 = ec2 instance
+  
+Use YAML
+  
+K8 Service (svc) - so can see it externally
+  
+##### set up K8
+  - open docker desktop as admin
+  - click on setting
+  - clik on 
+  - kubectl 
+  - kubectl get svc
