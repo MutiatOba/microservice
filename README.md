@@ -111,6 +111,7 @@ docker run hello-world [hello-world is the name of the image]
 <img width="270" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5d776280-b939-4f4f-bd05-d2636443c6b7">
 
 - Need to do a ```apt update``` and can access the index.html file by cd into the following directory: /usr/share/nginx/html
+
 <img width="229" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/9af257e0-bb90-4d54-a3e1-32bedf80d18d">
 
 - In the above directory you will find two files one including the index.html file
@@ -189,8 +190,8 @@ Once the push is successful, the image will be available in your Docker Hub repo
 
 3. enter into Dockerfile - ```nano Dockerfile```
 
- <img width="364" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2362090f-e338-4ba5-8ca8-ad3efa7077db">
-
+ 
+  <img width="364" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2362090f-e338-4ba5-8ca8-ad3efa7077db">
 
 
 4. create the image: ```docker build -t mutioba/appx:v2 .```
@@ -203,8 +204,10 @@ Once the push is successful, the image will be available in your Docker Hub repo
 
 8. type into your webbrower: localhost:3000 - will show you your app
 
+
   <img width="541" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/2d0a0d0e-ee46-4282-be06-edc446a0c8bb">
 
+  
 ### Kubernetes
   
 Kubernettes - Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management. Can scale with it and make it fault tolerant, it is self healing.
@@ -219,23 +222,29 @@ Dependecies: node app container must work, docker must be running
 - shouldnt us microservices - when small projects which doesnt need to scale as loads of resources to manage which is costly and needs to be maintained. 
 
 #### Using kubernetes
-<img width="288" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5e14c2f1-e4e3-493d-acb6-733d2aab056e">
+
+  <img width="288" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/5e14c2f1-e4e3-493d-acb6-733d2aab056e">
  
 1. create a folder
 2. create YML file
-<img width="294" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/7c6c7775-4d1e-49e2-a9f2-aa420d19b0ed">
+
+  <img width="294" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/7c6c7775-4d1e-49e2-a9f2-aa420d19b0ed">
 
 3. type in gitbash: ```kubectl create -f nginx-deployment.yml```
 4. type ```kubectl get deploy``` then ```kubectl get pods```
-<img width="292" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3aaafb4d-79c7-43bb-ae21-991f250d4143">
+
+  <img width="292" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3aaafb4d-79c7-43bb-ae21-991f250d4143">
 
 ### creating service
 <img width="318" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/1151731d-675b-4c52-a742-d4cdb4a36563">
+  
 1. in the same folder as above create yml file
-<img width="223" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/d6052f4e-4655-4487-941b-91e6216755de">
+
+  <img width="223" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/d6052f4e-4655-4487-941b-91e6216755de">
 
 2. run the command: ```kubectl create -f nginx-service.yml```
- <img width="214" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3e6ec9a6-3c21-48c6-a6aa-2e6bb4e1fcda">
+ 
+  <img width="214" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/3e6ec9a6-3c21-48c6-a6aa-2e6bb4e1fcda">
 
   <img width="335" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e0871c2f-3928-46ec-a8d7-e97b4bfd4e7d">
 
@@ -244,8 +253,29 @@ Dependecies: node app container must work, docker must be running
 k8 is self healing:
 1. in a new bash command run ```kubectl get pods```
 2. then delete a pod: ```kubectl delete pod <pod id>
-<img width="232" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e9d050b8-089f-429d-9d37-b5ebb719eef1">
+
+  <img width="232" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/e9d050b8-089f-429d-9d37-b5ebb719eef1">
+  
 3. you will see when you run the ```kubectl get pods``` again that a new pod has started
-<img width="392" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/227ab9b4-7d2a-4426-b8a9-fbb6e27e5db5">
+
+  <img width="392" alt="image" src="https://github.com/MutiatOba/microservice/assets/118978642/227ab9b4-7d2a-4426-b8a9-fbb6e27e5db5">
 
   
+### Connecting the Sparta App to the DB
+#### Creat the DB image
+ - Go to Docker Hub to get the mongodb image
+- Go to GitBash and type the following to create the container: ```docker run -d -p 27017:27017 mongo```
+- Obtain the container id: ```docker ps```
+- ssh into the container to change the bindip address: first type the alias: ```alias docker="winpty docker"``` then the command to ssh in ```docker exec -it 28bda0601966 bash```
+- cd to the /etc folder and run the following command to change bind ip address: ```sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' mongod.conf.orig```
+- create an image from the container: ```ddocker commit 28bda0601966 mutioba/mongo_db:v2```
+- check the image is there: ```docker images``` and push it to docker hub ```docker login```
+
+#### the DB deployment & service files, Update the app deployment file and Create PV
+
+1. Create the yml files for the db deploment and services
+2. create the yml file for the pv and pv
+3. update the app yml file to include reference to pv and add the enviroment variale
+2. run the create deployment command: ```kubectl  create -f mongo_deployment.yml`` to see the deployment type: ```kubectl get deployment```
+4. add command to connect app to db
+kubectl exec -l app=mongodb-deployment -- env node seeds/seed.js
